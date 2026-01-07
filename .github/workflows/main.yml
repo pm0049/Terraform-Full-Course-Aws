@@ -196,7 +196,7 @@ jobs:
             echo "WORKSPACE_NAME=dev" >> $GITHUB_ENV
             echo "TF_VAR_FILE=dev.tfvars" >> $GITHUB_ENV
           fi
-
+      
       - name: Select Terraform Workspace
         run: |
           terraform workspace select $WORKSPACE_NAME || terraform workspace new $WORKSPACE_NAME
